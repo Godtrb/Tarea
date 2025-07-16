@@ -79,3 +79,5 @@ for Codigo in productos.items():
 print(f"EL valor total del inventario es: Q{ValorInventario}")
 
 for Codigo in productos.items():
+    if Codigo["categoria"]=="Mujer":
+        Mujer=Mujer+1
