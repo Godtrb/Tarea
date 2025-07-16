@@ -12,19 +12,26 @@ for i in range(cantidad):
                 precio=float(input("Ingrese el precio: Q"))
 
                 if (precio>0):
-                    categoria = input("Ingrese la categoria del producto: ")
-                    talla = input("Ingrese la talla del producto: ")
-                    cantidad = int(input("Ingrese la cantidad que se agregara del producto: "))
-                    if cantidad>0:
-                        productos[codigo] = {
-                            "nombre": nombre,
-                            "precio": precio,
-                            "categoria": categoria,
-                            "talla": talla,
-                            "cantidad": cantidad
-                        }
-                    elif cantidad<=0:
-                        print("Cantidad invalida")
+
+                    categoria = int(input("Ingrese la categoria del producto"
+                                          "1)Mujer  2)Hombre  3)Niño "))
+                    if categoria==1|categoria==2|categoria==3:
+
+                        talla = input("Ingrese la talla del producto: ")
+                        cantidad = int(input("Ingrese la cantidad que se agregara del producto: "))
+                        if cantidad>0:
+                            productos[codigo] = {
+                                "nombre": nombre,
+                                "precio": precio,
+                                "categoria": categoria,
+                                "talla": talla,
+                                "cantidad": cantidad
+                            }
+                        elif cantidad<=0:
+                            print("Cantidad invalida")
+                            i=i-1
+                    else:
+                        print("Cantegoria invalida")
                         i=i-1
                 elif precio<=0:
                     print("Precio invalido.")
