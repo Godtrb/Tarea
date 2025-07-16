@@ -6,7 +6,7 @@ for i in range(cantidad):
     print(f"\n producto #{i+1}:")
     codigo=input("Ingrese el codigo del producto: ")
     if codigo>0:
-        if codigo not in estudiantes:
+        if codigo not in productos:
 
                 nombre=input("Ingrese el nombre del producto: ")
                 precio=float(input("Ingrese el precio: Q"))
@@ -62,3 +62,6 @@ else:
     print("El producto no existe")
 ValorInventario=0
 for Codigo in productos.items():
+    ValorInventario= ValorInventario + (Codigo["precio"]*Codigo["cantidad"])
+
+print(f"EL valor total del inventario es: Q{ValorInventario}")
