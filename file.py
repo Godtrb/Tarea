@@ -80,4 +80,12 @@ print(f"EL valor total del inventario es: Q{ValorInventario}")
 
 for Codigo in productos.items():
     if Codigo["categoria"]=="Mujer":
-        Mujer=Mujer+1
+        Mujer=Mujer+Codigo["cantidad"]
+    if Codigo["categoria"]=="Hombre":
+        Hombre=Hombre+Codigo["cantidad"]
+    if Codigo["categoria"]=="Niño":
+        Niño=Niño+Codigo["cantidad"]
+print("\nListe de categorias")
+print(f"Mujer: {Mujer}")
+print(f"Hombre: {Hombre}")
+print(f"Niño: {Niño}")
