@@ -47,12 +47,18 @@ for Codigo in productos.items():
     print(f"Precio: {Codigo["precio"]}")
     print(f"Categoria: {Codigo["categoria"]}")
     print(f"Talla: {Codigo["talla"]}")
+    print(f"En existencia: {Codigo["cantidad"]}")
 
-print(" Buscar estudiante")
-ado=input("Ingrese el carnet: ")
-if ado in estudiantes:
-    print(f"Nombre: {estudiantes[ado]['nombre']}")
-    print(f"Edad: {estudiantes[ado]['edad']}")
-    print(f"Carrera: {estudiantes[ado]['carrera']}")
+print(" Buscar producto")
+ado=input("Ingrese el codigo del producto a buscar: ")
+if ado in productos:
+    print(f"Codigo: {ado}")
+    print(f"Nombre: {ado["nombre"]}")
+    print(f"Precio: {ado["precio"]}")
+    print(f"Categoria: {ado["categoria"]}")
+    print(f"Talla: {ado["talla"]}")
+    print(f"En existencia: {ado["cantidad"]}")
 else:
-    print("El estudiante no existe")
+    print("El producto no existe")
+ValorInventario=0
+for Codigo in productos.items():
