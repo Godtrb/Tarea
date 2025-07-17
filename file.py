@@ -3,7 +3,7 @@ productos={}
 cantidad=int(input(f"\nIngrese la cantidad de estudiantes: "))
 for i in range(cantidad):
     print(f"\n producto #{i+1}:")
-    codigo=input("Ingrese el codigo del producto: ")
+    codigo=int(input("Ingrese el codigo del producto: "))
     if codigo>0:
         if codigo not in productos:
 
